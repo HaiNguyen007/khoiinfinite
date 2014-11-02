@@ -9,6 +9,13 @@ router.get('/', function(req, res) {
     content: trapFuncs.generate('Hello')
   });
 });
+router.get('/about',function(req,res){
+  res.render('index',{
+    title: "About This Project",
+    word: "About This Project",
+    content: "About This Project"
+  })
+});
 router.get('/:word',function(req,res){
   res.render('index',{
     title: req.params.word,
@@ -16,4 +23,5 @@ router.get('/:word',function(req,res){
     content: trapFuncs.generate(req.params.word)
   })
 });
+
 module.exports = router;

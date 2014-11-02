@@ -4,7 +4,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
-var fs = require('fs');
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +22,6 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
-
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
