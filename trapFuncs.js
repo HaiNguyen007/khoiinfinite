@@ -18,7 +18,8 @@ trapFuncs.generate = function(word){
     var html = "";
     var rand2 = require('random-seed').create(word);
     for (var i = 0 ; i < rand2.intBetween(400,600); i++){
-        html = html + ' ' + this.addLink(this.words[rand2(this.words.length)]);
+        var word = (rand2(10) === 1) ? this.words[rand2(this.words.length)] + ' ' + this.words[rand2(this.words.length)] : this.words[rand2(this.words.length)];
+        html = html + ' ' + this.addLink(word);
     }
     return html;
 
