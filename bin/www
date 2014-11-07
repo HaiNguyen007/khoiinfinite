@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+require('newrelic');
+
 var debug = require('debug')('spidertrap');
 var app = require('../app');
 

@@ -9,7 +9,7 @@ trapFuncs.addLink = function(html) {
     if (rand(100) === 1) {
         html += "<br>"; // Add new line every about 100 words
     } else if (rand(200) === 1) {
-        var header = rand.intBetween(1, 3);
+        var header = rand.intBetween(2, 3);
         html = "</p><h" + header + ">" + html + "</h" + header + "><p>";// add new paragraph every about 60 words
     }
     return html;
